@@ -7,12 +7,10 @@ const generateTokens = async (userid) => {
     const accessToken = await user.generateAccessToken();
     const refreshToken = await user.generateRefreshToken();
 
-
-  
     const userefreshToken = await userTokenmodel.findById(user._id);
-    
+
     // Delete older refreshToken
-    
+
     if (userefreshToken) {
       await userefreshToken.findOneAndDelete({ userId: user._id });
     }

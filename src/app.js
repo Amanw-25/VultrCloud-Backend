@@ -5,6 +5,8 @@ import "./config/passportjwtconfig.js";
 import { passport } from "./config/passportjwtconfig.js";
 import { appconfig } from "./config/appconfig.js";
 import { Authroutes } from "./routes/userRoute.js";
+import carbonFootprintRoutes from "./routes/carbonFootprintRoute.js";
+import mistralRoute from './routes/mistralRoutes.js';
 
 export const app = express();
 
@@ -19,4 +21,7 @@ app.use(
   })
 );
 
-app.use("/api/v1/CII/auth", Authroutes);
+app.use("/api/v1/vultrCloud/auth", Authroutes);
+app.use("/api/v1/vultrCloud/footprint", carbonFootprintRoutes);
+app.use('/api/v1/vultrCloud/mistral',mistralRoute);
+

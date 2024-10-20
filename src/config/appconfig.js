@@ -9,6 +9,7 @@ const appconfig = {
   ACCESS_TOKEN_EXP: process.env.ACCESS_TOKEN_EXP,
   REFRESH_TOKEN_KEY: process.env.REFRESH_TOKEN_KEY,
   REFRESH_TOKEN_EXP: process.env.REFRESH_TOKEN_EXP,
+  MISTRAL_API_KEY:process.env.MISTRAL_API_KEY
 };
 
 export { appconfig };
